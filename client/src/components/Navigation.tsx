@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoPath from "@assets/ChatGPT_Image_Jun_7__2025__10_59_05_PM-removebg-preview_1749317461815.png";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,11 +36,16 @@ export default function Navigation() {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <motion.div 
-            className="text-2xl font-bold gradient-text cursor-pointer"
+            className="flex items-center space-x-3 cursor-pointer"
             whileHover={{ scale: 1.05 }}
             onClick={() => scrollToSection("home")}
           >
-            NexusAI
+            <img 
+              src="/attached_assets/ChatGPT_Image_Jun_7__2025__10_59_05_PM-removebg-preview_1749317461815.png"
+              alt="AutonoMind Logo"
+              className="h-8 w-8"
+            />
+            <span className="text-2xl font-bold gradient-text">AutonoMind</span>
           </motion.div>
           
           <div className="hidden md:flex space-x-8">
