@@ -183,7 +183,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="font-semibold">Email</h4>
-                      <p className="text-gray-400">hello@nexusai.com</p>
+                      <p className="text-gray-400">hello@autonomind.com</p>
                     </div>
                   </div>
                   <div className="flex items-center">

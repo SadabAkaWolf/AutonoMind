@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoPath from "@assets/ChatGPT_Image_Jun_7__2025__10_59_05_PM-removebg-preview_1749317461815.png";
+
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);

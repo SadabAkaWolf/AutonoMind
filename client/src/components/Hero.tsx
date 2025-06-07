@@ -16,11 +16,11 @@ export default function Hero() {
       {/* Background with dark overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&h=1080" 
-          alt="Futuristic AI technology and neural networks" 
+          src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&h=1080" 
+          alt="Dark futuristic AI neural network with neon blue and purple accents" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-70"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-black/80 to-purple-900/50"></div>
       </div>
       
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
@@ -34,7 +34,7 @@ export default function Hero() {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="gradient-text block mt-2"
           >
-            Intelligent AI Solutions
+            AutonoMind AI Solutions
           </motion.span>
         </motion.h1>
         

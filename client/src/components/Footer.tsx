@@ -33,11 +33,16 @@ export default function Footer() {
         >
           <div className="col-span-1 md:col-span-2">
             <motion.div 
-              className="text-3xl font-bold gradient-text mb-4 cursor-pointer"
+              className="flex items-center space-x-3 cursor-pointer mb-4"
               whileHover={{ scale: 1.05 }}
               onClick={() => scrollToSection("home")}
             >
-              NexusAI
+              <img 
+                src="/attached_assets/ChatGPT_Image_Jun_7__2025__10_59_05_PM-removebg-preview_1749317461815.png"
+                alt="AutonoMind Logo"
+                className="h-10 w-10"
+              />
+              <span className="text-3xl font-bold gradient-text">AutonoMind</span>
             </motion.div>
             <p className="text-gray-400 mb-6 max-w-md">
               Transforming businesses through intelligent AI solutions. Your partner in the future of automation and innovation.
@@ -107,7 +112,7 @@ export default function Footer() {
           transition={{ delay: 0.2 }}
           className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400"
         >
-          <p>&copy; 2024 NexusAI. All rights reserved. Built with passion for the future of AI.</p>
+          <p>&copy; 2024 AutonoMind. All rights reserved. Built with passion for the future of AI.</p>
         </motion.div>
       </div>
     </footer>

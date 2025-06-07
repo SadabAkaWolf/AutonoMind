@@ -52,7 +52,7 @@ export default function About() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Why Choose <span className="gradient-text">NexusAI</span>
+            Why Choose <span className="gradient-text">AutonoMind</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             We're not just another AI company. We're your strategic partner in digital transformation.
