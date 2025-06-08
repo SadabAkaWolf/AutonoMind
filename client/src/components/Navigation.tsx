@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoImage from "@assets/ChatGPT_Image_Jun_7__2025__10_59_05_PM-removebg-preview_1749317461815.png";
 
 
 export default function Navigation() {
@@ -29,8 +30,10 @@ export default function Navigation() {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "glass-morphism" : "bg-transparent"
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+        isScrolled 
+          ? "backdrop-blur-xl bg-black/20 border-b border-white/10 shadow-lg shadow-blue-500/10" 
+          : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-6 py-4">
@@ -41,9 +44,9 @@ export default function Navigation() {
             onClick={() => scrollToSection("home")}
           >
             <img 
-              src="/attached_assets/ChatGPT_Image_Jun_7__2025__10_59_05_PM-removebg-preview_1749317461815.png"
+              src={logoImage}
               alt="AutonoMind Logo"
-              className="h-8 w-8"
+              className="h-10 w-10"
             />
             <span className="text-2xl font-bold gradient-text">AutonoMind</span>
           </motion.div>
@@ -58,11 +61,20 @@ export default function Navigation() {
             ].map((item) => (
               <motion.button
                 key={item.id}
-                className="hover:text-blue-400 transition-colors duration-300 text-white"
+                className="relative px-4 py-2 text-white font-medium transition-all duration-300 group"
                 whileHover={{ scale: 1.05 }}
                 onClick={() => scrollToSection(item.id)}
               >
-                {item.label}
+                <span className="relative z-10 group-hover:text-white transition-colors duration-300">
+                  {item.label}
+                </span>
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  whileHover={{ 
+                    boxShadow: "0 0 20px rgba(59, 130, 246, 0.5)" 
+                  }}
+                />
+                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 group-hover:w-full transition-all duration-300" />
               </motion.button>
             ))}
           </div>

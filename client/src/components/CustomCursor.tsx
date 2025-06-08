@@ -4,50 +4,37 @@ export default function CustomCursor() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const updatePosition = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
-      setIsVisible(true);
     };
 
-    const handleMouseEnter = () => setIsHovering(true);
-    const handleMouseLeave = () => setIsHovering(false);
     const handleMouseDown = () => setIsClicked(true);
     const handleMouseUp = () => setIsClicked(false);
-    const handleMouseOut = () => setIsVisible(false);
 
-    // Add event listeners
     document.addEventListener("mousemove", updatePosition);
-    document.addEventListener("mouseout", handleMouseOut);
     document.addEventListener("mousedown", handleMouseDown);
     document.addEventListener("mouseup", handleMouseUp);
 
-    // Add hover listeners to interactive elements
-    const interactiveElements = document.querySelectorAll(
-      "button, a, input, textarea, select, [role='button'], .cursor-hover"
-    );
-    
-    interactiveElements.forEach((el) => {
-      el.addEventListener("mouseenter", handleMouseEnter);
-      el.addEventListener("mouseleave", handleMouseLeave);
-    });
+    // Dynamic hover detection
+    const checkHover = () => {
+      const elementUnderMouse = document.elementFromPoint(position.x, position.y);
+      if (elementUnderMouse) {
+        const isInteractive = elementUnderMouse.closest("button, a, input, textarea, select, [role='button'], .cursor-hover");
+        setIsHovering(!!isInteractive);
+      }
+    };
+
+    const interval = setInterval(checkHover, 50);
 
     return () => {
       document.removeEventListener("mousemove", updatePosition);
-      document.removeEventListener("mouseout", handleMouseOut);
       document.removeEventListener("mousedown", handleMouseDown);
       document.removeEventListener("mouseup", handleMouseUp);
-      
-      interactiveElements.forEach((el) => {
-        el.removeEventListener("mouseenter", handleMouseEnter);
-        el.removeEventListener("mouseleave", handleMouseLeave);
-      });
+      clearInterval(interval);
     };
-  }, []);
-
-  if (!isVisible) return null;
+  }, [position.x, position.y]);
 
   return (
     <div

@@ -116,12 +116,8 @@
     animation: slide-up 0.6s ease-out;
   }
 
-  .cursor-ai {
-    cursor: none;
-  }
-
-  .cursor-ai-hover {
-    cursor: none;
+  .cursor-ai * {
+    cursor: none !important;
   }
 
   @keyframes float {

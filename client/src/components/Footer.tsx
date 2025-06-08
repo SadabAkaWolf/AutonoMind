@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Twitter, Linkedin, Github } from "lucide-react";
 import { fadeInUp } from "@/lib/animations";
+import logoImage from "@assets/ChatGPT_Image_Jun_7__2025__10_59_05_PM-removebg-preview_1749317461815.png";
 
 const services = [
   "AI Automation",
@@ -38,7 +39,7 @@ export default function Footer() {
               onClick={() => scrollToSection("home")}
             >
               <img 
-                src="/attached_assets/ChatGPT_Image_Jun_7__2025__10_59_05_PM-removebg-preview_1749317461815.png"
+                src={logoImage}
                 alt="AutonoMind Logo"
                 className="h-10 w-10"
               />

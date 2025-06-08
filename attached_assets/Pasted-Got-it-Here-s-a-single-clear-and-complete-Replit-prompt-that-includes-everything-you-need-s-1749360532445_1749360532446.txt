@@ -1,0 +1,35 @@
+Got it! Here's a **single, clear, and complete Replit prompt** that includes everything you need — structured, professional, and optimized to avoid any confusion or missed requirements:
+
+---
+
+Hi! Please help me refine and complete my project. I’ve already started a dark-themed AI agency website for **AutonoMind** using React and Tailwind CSS. Our logo is attached, but there are a few issues and enhancements I need your help with. This is my last credit, so I need everything to be done correctly in one go. Here's the full list:
+
+1. **Fix the disappearing cursor** – Right now, when I hover over the website, the mouse cursor vanishes. Please correct this and make sure a modern, custom-styled cursor is visible and works smoothly across all sections.
+
+2. **Fix the logo** – The actual logo image is not showing. Instead, it just says "AutonoMind logo" as text. Please make sure the actual logo file (attached) is properly displayed in the header and scaled appropriately.
+
+3. **Improve the top navigation bar** – The navbar (where Home, Services, etc., are listed) looks too basic. Please redesign it to be **aesthetic and modern**: use glowing hover effects, smooth transitions, and a sticky layout with semi-transparency or blur (glassmorphism is a plus!).
+
+4. **Interactive background in the hero section** – I want the background in the hero (above the fold) section to **respond to cursor movement** (e.g., parallax tilt, floating particles, or slight 3D animation effect). Make this area visually impressive and dynamic.
+
+5. **Create and integrate a database** – I need a simple database setup to store:
+
+   * Contact form submissions (client inquiries)
+   * Login or registration info (optional: Firebase, Supabase, or a simple JSON/Node backend)
+
+6. **General polish** – Keep the dark, futuristic theme, ensure smooth scroll and elegant transitions using **Framer Motion**, and make sure everything is fully **responsive** for mobile/tablet.
+
+7. **Other key design elements** (already started but please double-check):
+
+   * Glowing accent colors (like neon blue/purple)
+   * Sleek card layouts
+   * Smooth hover effects on buttons/cards
+   * Use **Inter** or **Poppins** fonts throughout
+
+The goal is for this site to feel like a **premium, futuristic AI solution provider**. Please make all the above changes and polish the project fully.
+
+Thanks!
+
+---
+
+Let me know if you want this prompt saved in a downloadable `.txt` or `.md` file.
