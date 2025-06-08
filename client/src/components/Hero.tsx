@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Bot, Brain, Play } from "lucide-react";
 import { fadeInUp, fadeIn } from "@/lib/animations";
+import InteractiveBackground from "./InteractiveBackground";
 
 export default function Hero() {
   const scrollToContact = () => {
@@ -13,14 +14,11 @@ export default function Hero() {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background with dark overlay */}
+      {/* Interactive Background */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&h=1080" 
-          alt="Dark futuristic AI neural network with neon blue and purple accents" 
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-black/80 to-purple-900/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-blue-900/30"></div>
+        <InteractiveBackground />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/40"></div>
       </div>
       
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
