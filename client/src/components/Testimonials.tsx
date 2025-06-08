@@ -4,33 +4,36 @@ import { fadeInUp, staggerChildren } from "@/lib/animations";
 
 const testimonials = [
   {
-    name: "Sarah Chen",
+    name: "Hasan Afridi",
     title: "CEO, TechFlow Solutions",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&h=150",
-    quote: "NexusAI transformed our customer service. Our response time decreased by 70% and customer satisfaction increased dramatically."
+    image:
+      "https://images.unsplash.com/photo-1668751986864-3b85145f9b86?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    quote:
+      "AutonoMind transformed our customer service. Our response time decreased by 70% and customer satisfaction increased dramatically.",
   },
   {
     name: "Marcus Rodriguez",
     title: "CTO, DataVantage Corp",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&h=150",
-    quote: "The ROI was immediate. Within 3 months, we automated 60% of our manual processes and saved $50K monthly."
+    image:
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&h=150",
+    quote:
+      "The ROI was immediate. Within 3 months, we automated 60% of our manual processes and saved $50K monthly.",
   },
   {
-    name: "Emily Thompson",
+    name: "Sara Alif",
     title: "Founder, InnovateLab",
-    image: "https://images.unsplash.com/photo-1494790108755-2616b612b639?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&h=150",
-    quote: "Outstanding support and expertise. They didn't just implement AI - they transformed how we think about our business."
-  }
+    image:
+      "https://images.unsplash.com/photo-1664575602554-2087b04935a5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    quote:
+      "Outstanding support and expertise. They didn't just implement AI - they transformed how we think about our business.",
+  },
 ];
 
 export default function Testimonials() {
   return (
     <section className="py-20 relative overflow-hidden">
       <div className="container mx-auto px-6">
-        <motion.div 
-          {...fadeInUp}
-          className="text-center mb-16"
-        >
+        <motion.div {...fadeInUp} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             What Our <span className="gradient-text">Clients Say</span>
           </h2>
@@ -38,8 +41,8 @@ export default function Testimonials() {
             Real results from real businesses that transformed with AI
           </p>
         </motion.div>
-        
-        <motion.div 
+
+        <motion.div
           variants={staggerChildren}
           initial="initial"
           whileInView="animate"
@@ -64,7 +67,7 @@ export default function Testimonials() {
                 </p>
               </div>
               <div className="flex items-center">
-                <img 
+                <img
                   src={testimonial.image}
                   alt={`${testimonial.name} testimonial`}
                   className="w-12 h-12 rounded-full mr-4 object-cover"
